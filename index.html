@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf Express</title>
+
+    <!-- Подключение Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Подключение Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Подключение AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Подключение локальных стилей -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Подключение AOS -->
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Видеофон -->
+        <div class="video-background">
+            <video autoplay muted loop id="video-bg">
+                <source src="videos/surf-truck.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Контейнер для всех секций, кроме футера -->
+        <div class="content-overlay">
+        <!-- Header -->
+            <header>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Surf Express Logo">
+                    <a href="index.html" class="logo-text">Surf Express</a>
+                </div>
+                <nav>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-users"></i> About us</a></li>
+                        <li><a href="services.html"><i class="fas fa-truck"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="hero">
+                <!-- hero-image -->
+                <!-- <div class="hero-image">
+                    <img src="images/hero-image.jpeg" alt="Truck">
+                </div> -->
+                
+                <!-- hero-video -->
+                <!-- <div class="hero-video">
+                    <video autoplay muted loop id="hero-video">
+                        <source src="videos/surf-truck.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div> -->
+            
+                <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+                    <h1><i class="fas fa-truck"></i> Reliable cargo transportation throughout the country</h1>
+                    <p>We guarantee fast and safe delivery of your cargo!</p>
+                    <a href="#contact" class="cta-button">Order a service</a>
+                </div>
+            </section>
+            
+            <section class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-card">
+                                <i class="fas fa-shield-alt fa-3x"></i>
+                                <h3>Safety</h3>
+                                <p>We prioritize the safety of your cargo.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-card">
+                                <i class="fas fa-tachometer-alt fa-3x"></i>
+                                <h3>Speed</h3>
+                                <p>Fast and reliable delivery services.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="700">
+                            <div class="feature-card">
+                                <i class="fas fa-star fa-3x"></i>
+                                <h3>Quality</h3>
+                                <p>High-quality service for your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Surf Express LLC. All rights reserved.</p>
+        <p>Website developed by Ferrum Software LLC.</p>
+        <p>Contact us: surf-express@gmail.com</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        });
+        // Закрытие меню при клике вне его области
+        document.addEventListener('click', function (event) {
+            const nav = document.querySelector('nav');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.querySelector('.nav-list');
+
+            if (!nav.contains(event.target) && navList.classList.contains('active')) {
+                navList.classList.remove('active');
+            }
+        });
+    </script>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Подключение AOS -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script> -->
+
+    <!-- Подключение AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Длительность анимации
+            // once: true, Анимация только один раз
+        });
+    </script>
+
+</body>
+</html>
