@@ -1,4 +1,4 @@
-/* Основные стили */
+/* Styles for the main page */
 html, body {
     height: 100%;
     margin: 0;
@@ -12,9 +12,7 @@ html, body {
     position: relative;
 }
 
-
-
-/* Видеофон */
+/* Video background */
 .video-background {
     position: absolute;
     top: 0;
@@ -32,7 +30,7 @@ html, body {
     object-position: center; /* Центрируем видео */
 }
 
-/* Контейнер для всех секций, кроме футера */
+/* Container for content */
 .content-overlay {
     position: relative;
     z-index: 1; /* Контент поверх видео */
@@ -45,28 +43,28 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgba(0, 0, 0, 1); /* Черный */
-    background-color: rgb(0, 0, 0); /* Белый */
+    color: rgba(0, 0, 0, 1);
+    background-color: rgb(0, 0, 0);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: rgba(0, 0, 0, 1); /* Черный */
+    color: rgba(0, 0, 0, 1);
 }
 
 a {
     text-decoration: none;
-    color: rgba(30, 144, 255, 1); /* Синий */
+    color: rgba(30, 144, 255, 1);
 }
 
 a:hover {
-    color: rgba(138, 43, 226, 1); /* Фиолетовый */
+    color: rgba(138, 43, 226, 1);
 }
 
 /* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Черный */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
@@ -87,42 +85,45 @@ header .logo img {
 }
 
 header .logo img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px 10px rgb(73, 130, 235);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 10px rgb(12, 202, 232);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 header .logo .logo-text {
-    font-family: 'Grape Nuts', cursive;
+    font-family: 'Montserrat', sans-serif;
     margin-left: 5px;
-    color: rgba(255, 255, 255, 1); /* Белый */
-    font-size: 2rem;
+    color: rgba(255, 255, 255, 1);
+    font-size: 2.5rem;
     font-weight: bold;
     text-decoration: none;
-    transition: text-shadow 0.3s;
+    transition: all 0.5s ease; /* Unit all animation */
 }
 
 header .logo .logo-text:hover {
-    color: rgb(42, 99, 241);
-    transform: scale(1.05);
-    text-shadow: 0 0 10px rgb(73, 130, 235);
+    color: rgb(0, 195, 255);
+    transform: scale(1.06);
+    text-shadow: 0 0 20px rgb(12, 202, 232);
 }
 
-/* Навигация */
+/* Navigation */
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     margin-right: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .nav-list li a {
     color: rgba(255, 255, 255, 1);
     font-weight: 500;
-    transition: color 0.3s;
+    padding: 5px 10px; /* Добавляем отступы для лучшего взаимодействия */
+    display: inline-block; /* Для корректной работы transform */
+    transition: all 0.5s ease; /* Анимация для всех свойств */
 }
 
-/* Кнопка для мобильного меню */
+/* Button menu for mobile devices */
 .menu-toggle {
     display: none;
     background: none;
@@ -130,15 +131,25 @@ header .logo .logo-text:hover {
     color: rgba(255, 255, 255, 1);
     font-size: 1.5rem;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
+
+.menu-toggle:hover {
+    transform: scale(1.2);
+    color: rgb(12, 202, 232);
+    text-shadow: 0 0 30px rgb(73, 149, 235);
+}
+
 
 nav ul li a:hover {
-    color: rgb(42, 99, 241);
+    color: rgb(12, 202, 232);
     text-shadow: 0 0 10px rgb(73, 149, 235);
     text-decoration: underline;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform: scale(1.2);
 }
 
-/* Адаптация для мобильных устройств */
+/* Adaptation for mobile devices */
 @media (max-width: 770px) {
     .menu-toggle {
         display: block;
@@ -151,7 +162,7 @@ nav ul li a:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 6%;
+        top: 5%;
         right: -2%;
         background-color: rgba(36, 36, 36, 0.892);
         padding: 10px;
@@ -206,7 +217,7 @@ nav ul li a:hover {
     box-shadow: 0 0 20px 10px rgba(43, 126, 221, 0.811);
 }
 
-/* Новые стили для hero-video */
+/* Styles for hero-video */
 .hero-video {
     position: absolute;
     top: 0;
@@ -226,25 +237,31 @@ nav ul li a:hover {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 1200px;
     padding: 20px;
     border-radius: 10px;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     color: rgb(213, 213, 213);
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .hero-content h1:hover {
-    color: #ffffff;
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+    transform: scale(1.1);
+    text-shadow: 0 0 40px rgb(12, 202, 232);
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+.hero-content p:hover {
     transform: scale(1.1);
     text-shadow: 0 0 40px rgb(12, 202, 232);
 }
@@ -256,22 +273,25 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 10px;
     font-size: 1.1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: all 0.5s ease; /* Unit all animation */
+    display: inline-block; /* Важно для transform */
+    transform-origin: center; /* Точка трансформации по центру */
+    will-change: transform; /* Подсказка браузеру для оптимизации */
+    backface-visibility: hidden; /* Устраняет мерцание в Safari */
 }
 
 .cta-button:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
     background: #0040c9bb;
     box-shadow: 0px 10px 60px rgba(135, 241, 255, 0.811);
     color: white;
     text-decoration: underline;
-    transition: transform 0.5s ease, box-shadow 0.5s ease; 
 }
 
 /* Features Section */
 .features {
     padding: 80px 0;
-    background-color: rgba(255, 255, 255, 0); /* Белый */
+    background-color: rgba(255, 255, 255, 0);
     z-index: -1;
 }
 
@@ -279,7 +299,7 @@ nav ul li a:hover {
     background-color: rgba(210, 210, 210, 0.199);
     text-align: center;
     padding: 20px;
-    border: 1px solid rgb(255, 255, 255); /* Серый */
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 20px;
@@ -291,7 +311,7 @@ nav ul li a:hover {
 }
 
 .feature-card i {
-    color: rgb(48, 101, 246); /* Синий */
+    color: rgb(48, 101, 246);
     margin-bottom: 20px;
 }
 
@@ -306,19 +326,19 @@ nav ul li a:hover {
 }
 
 .feature-card:hover h3 {
-    color: rgb(255, 255, 255); /* ��ерный */
+    color: rgb(255, 255, 255);
 }
 
 .feature-card p {
     font-size: 1.1rem;
-    color: rgb(255, 255, 255); /* Серый */
+    color: rgb(255, 255, 255);
 }
 
 .feature-card:hover p {
-    color: rgb(103, 189, 235); /* Синий */
+    color: rgb(49, 80, 237);
 }
 
-/* Адаптация для мобильных устройств */
+/* Adaptation for mobile devices */
 @media (max-width: 770px) {
     .feature-card {
         width: 100%;
@@ -328,8 +348,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: rgb(0, 0, 0); /* Черный */
-    color: rgb(255, 255, 255); /* Белый */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 20px 0;
     flex-shrink: 0; /* Футер не сжимается */
@@ -339,7 +359,7 @@ footer p {
     margin: 0;
 }
 
-/* Адаптация под мобильные устройства */
+/* Adaptation for mobile devices */
 
 @media (max-width: 770px) {
     .hero {
