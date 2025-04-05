@@ -79,14 +79,14 @@ header .logo {
 }
 
 header .logo img {
-    height: 60px;
+    height: 80px;
     border-radius: 50%;
     transition: all 0.5s ease;
 }
 
 header .logo img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px 10px rgb(12, 202, 232);
+    box-shadow: 0 0 10px 8px rgb(12, 202, 232);
 }
 
 header .logo .logo-text {
