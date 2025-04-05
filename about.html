@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Surf Express</title>
+    <!-- <link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
+
+    <!-- Connecting Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Connecting Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Connecting Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Connecting AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Connecting Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+    <script src="js/chat-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    </script>
+
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Video background -->
+        <div class="video-background">
+            <video autoplay muted loop id="video-bg">
+                <source src="videos/truck-surf-4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Container for all content, except footer -->
+        <div class="content-overlay">
+            <!-- Header -->
+            <header>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Surf Express Logo">
+                    <a href="index.html" class="logo-text">Surf Express</a>
+                </div>
+                <nav>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-users"></i> About us</a></li>
+                        <li><a href="services.html"><i class="fas fa-truck"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Hero Section -->
+            <section class="about-hero">
+                <div class="about-hero-content" data-aos="fade-up" data-aos-delay="200">
+                    <h1><i class="fas fa-users"></i> About Us </h1>
+                    <p>From humble beginnings to becoming a trusted name in cargo transportation</p>
+                </div>
+            </section>
+
+            <!-- About Content -->
+            <section class="about-content">
+                <div class="container">
+
+                    <!-- Row for About -->
+                    <div class="about-content-block">
+                        <div class="row">
+                            <div class="col-lg-12"> <!-- Изменил на 12 колонок, так как изображение убрано -->
+                                <div class="about-text">
+                                    <h2>Founded in 2022 by Boris Gordienko</h2>
+                                    <p>Surf Express began as a small logistics company with just two trucks and a big vision. Our founder, Boris Gordienko, a former professional surfer and logistics expert, combined his passion for movement with his business acumen to create a company that would revolutionize cargo transportation.</p>
+                                    
+                                    <p>Boris named the company "Surf Express" as a metaphor - just as surfers ride waves efficiently across the ocean, our trucks would efficiently transport goods across the country. The surfing background also inspired our company values: adaptability, flow, and riding the waves of opportunity.</p>
+                                    
+                                    <h3>Our Growth</h3>
+                                    <p>Starting with local deliveries in 2022, we quickly expanded our services nationwide thanks to our commitment to reliability and customer satisfaction. Today, Surf Express operates a fleet of over 50 modern trucks and employs more than 100 dedicated professionals.</p>
+                                    
+                                    <h3>Our Mission</h3>
+                                    <p>We exist to make cargo transportation simple, reliable, and efficient for businesses of all sizes. Our goal is to be the most trusted logistics partner for companies who value their goods and their customers' satisfaction.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Values Section -->
+                    <div class="values-section">
+                        <h2 class="values-title">Our Core Values</h2>
+                        <div class="values-grid">
+                            <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+                                <i class="fas fa-anchor"></i>
+                                <h4>Reliability</h4>
+                                <p>We deliver what we promise, when we promise it</p>
+                            </div>
+                            <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h4>Efficiency</h4>
+                                <p>Optimized routes and processes for timely deliveries</p>
+                            </div>
+                            <div class="value-item" data-aos="fade-up" data-aos-delay="600">
+                                <i class="fas fa-hands-helping"></i>
+                                <h4>Partnership</h4>
+                                <p>We work with our clients, not just for them</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2023 Surf Express LLC. All rights reserved.</p>
+                <p>Website developed by Ferrum Software LLC.</p>
+                <p>Contact us: surf-express@gmail.com</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Chat button -->
+    <button id="chat-button" class="chat-button">
+        <i class="fas fa-comments"></i> Send us a message
+    </button>
+
+    <!-- Chat window -->
+    <div class="chat-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <h3>Send us a message</h3>
+                <button id="close-chat" class="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <p>Ask your question and we will answer you as soon as possible.</p>
+                <input type="text" id="chat-name" placeholder="Name" required>
+                <input type="email" id="chat-email" placeholder="Email" required>
+                <input type="tel" id="chat-phone" placeholder="Phone" required>
+                <textarea id="chat-message" placeholder="Type your message here..." required></textarea>
+            </div>
+            <div class="chat-footer">
+                <button id="send-message" class="send-button">Send</button>
+            </div>
+            <!-- Notification -->
+            <div id="notification" class="notification">
+                <span id="notification-message"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="js/about.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/menu-toggle.js"></script>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Подключение AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+
+</body>
+</html>

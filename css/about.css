@@ -1,0 +1,308 @@
+/* About Page Specific Styles */
+.about-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(48, 101, 246, 0.5);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    right: -100%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Добавляем transition на all для плавности всех изменений */
+    box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
+}
+
+.about-container.visible {
+    right: 0;
+    opacity: 1;
+}
+
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -40px; /* Отступ от header */
+    overflow: hidden;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(57, 57, 57, 0.541);
+    border: 1px solid rgba(48, 101, 246, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about-hero-content.visible {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.about-hero-content.visible:hover {
+    transform: translateX(0) scale(1.05); /* Комбинируем трансформации */
+    box-shadow: 0 0 20px 20px rgba(43, 126, 221, 0.811);
+    background-color: rgba(36, 36, 36, 0.892);
+}
+
+.about-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: rgb(213, 213, 213);
+    transition: all 0.5s ease;
+}
+
+.about-hero-content h1:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 40px rgb(12, 202, 232);
+}
+
+.about-hero-content p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    color: rgb(214, 214, 214);
+    transition: all 0.5s ease;
+}
+
+.about-hero-content p:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 20px rgb(12, 202, 232);
+}
+
+/* Анимация при скролле */
+.about-hero-content.scroll-out {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.about-hero-content.scroll-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* About Page Specific Styles */
+.about-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid rgba(48, 101, 246, 0.5);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    right: -100%;
+    opacity: 0;
+    transition: right 0.8s ease-out, opacity 0.8s ease-out;
+    box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
+}
+
+.about-container.visible {
+    right: 0;
+    opacity: 1;
+}
+
+/* About content block */
+.about-content-block {
+    background-color: rgba(57, 57, 57, 0.541);
+    border: 1px solid rgba(48, 101, 246, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    position: relative;
+    right: -100%;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.about-content-block.visible {
+    right: 0;
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+.about-content-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 20px rgba(48, 101, 246, 0.4);
+    border-color: rgba(48, 101, 246, 0.7);
+    background: rgba(36, 36, 36, 0.892);
+}
+
+/* Text styles */
+.about-text {
+    color: rgb(214, 214, 214);
+    transition: all 0.5s ease;
+    font-weight: 500;
+}
+
+.about-text h2 {
+    color: rgb(156, 211, 255);
+    border-bottom: 2px solid rgba(48, 101, 246, 0.3);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.about-text h2:hover {
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(48, 101, 246, 0.838);
+    color: rgb(48, 101, 246);
+    border-bottom-color: rgb(48, 101, 246);
+}
+
+.about-text h3 {
+    color: rgb(156, 211, 255);
+    border-bottom: 2px solid rgba(48, 101, 246, 0.3);
+    padding-bottom: 10px;
+    margin: 25px 0 15px;
+    font-size: 1.6rem;
+    transition: all 0.4s ease;
+}
+
+.about-text h3:hover {
+    letter-spacing: 1px;
+    text-shadow: 0 0 15px rgba(48, 101, 246, 0.838);
+    color: rgb(48, 101, 246);
+    border-bottom-color: rgb(48, 101, 246);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Values Section */
+.values-title {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(183, 183, 183);
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.values-title:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 30px rgb(4, 238, 255);
+}
+
+.values-title::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: rgba(207, 207, 207, 0.84);
+    margin: 20px auto 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Увеличено расстояние */
+    margin: 50px auto; /* Центрирование */
+    padding: 20px;
+}
+
+.value-item {
+    background-color: rgba(210, 210, 210, 0.199);
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    margin-bottom: 20px;
+}
+
+.value-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 10px rgb(49, 80, 237);
+    background-color: rgba(0, 0, 0, 0.521);
+}
+
+.value-item i {
+    font-size: 3rem;
+    color: rgb(0, 63, 235);
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.value-item:hover i {
+    color: rgb(0, 165, 247);
+    transform: rotate(360deg) scale(1.2);
+}
+
+.value-item h4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+    transition: all 0.5s ease;
+}
+
+.value-item:hover h4 {
+    transform: scale(1.2);
+    color: rgb(255, 255, 255);
+}
+
+.value-item p {
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+.value-item:hover p {
+    color: rgb(0, 165, 247);
+    transform: scale(1.1);
+}
+
+@media (max-width: 770px) {
+    .values-grid {
+        gap: 20px;
+    }
+}
+
+/* Adaptation for mobile devices menu toggle and navigation */
+@media (max-width: 770px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 2.4%;
+        right: -2%;
+        background-color: rgba(36, 36, 36, 0.892);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 3;
+        text-decoration: underline;
+    }
+
+    .nav-list.active {
+        display: flex;
+
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+}

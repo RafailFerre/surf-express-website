@@ -149,7 +149,7 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
-/* Adaptation for mobile devices */
+/* Adaptation for mobile devices menu toggle and navigation */
 @media (max-width: 770px) {
     .menu-toggle {
         display: block;
@@ -162,7 +162,7 @@ nav ul li a:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 5%;
+        top: 4.5%;
         right: -2%;
         background-color: rgba(36, 36, 36, 0.892);
         padding: 10px;
@@ -189,8 +189,85 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgba(255, 255, 255, 1);
+    margin-top: -40px; /* Добавляем отступ сверху */
     overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1500px;
+    padding: 40px;
+    background-color: rgba(57, 57, 57, 0.541);
+    border: 1px solid rgba(48, 101, 246, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.hero-content:hover {
+    box-shadow: 0 0 20px 20px rgb(0, 50, 166);
+    background-color: rgba(21, 21, 21, 0.731);
+}
+
+.hero-content.visible {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.hero-content.visible:hover {
+    transform: translateX(0) scale(1.05); /* Комбинируем трансформации */
+    box-shadow: 0 0 20px 20px rgba(43, 126, 221, 0.811);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: rgb(213, 213, 213);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-content h1:hover {
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+    transform: scale(1.03);
+    text-shadow: 0 0 40px rgb(12, 202, 232);
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
+}
+
+.hero-content p:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 40px rgb(12, 202, 232);
+}
+
+.cta-button {
+    padding: 10px 30px;
+    background: #7fadf170;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: all 0.5s ease; /* Unit all animation */
+    display: inline-block; /* Важно для transform */
+    transform-origin: center; /* Точка трансформации по центру */
+    will-change: transform; /* Подсказка браузеру для оптимизации */
+    backface-visibility: hidden; /* Устраняет мерцание в Safari */
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background: #0040c9bb;
+    box-shadow: 0px 0 5px 10px rgba(12, 203, 232, 0.377);
+    color: white;
+    text-decoration: underline;
 }
 
 .hero-image {
@@ -242,52 +319,6 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: rgb(213, 213, 213);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.hero-content h1:hover {
-    transition: transform 0.5s ease, text-shadow 0.5s ease;
-    transform: scale(1.1);
-    text-shadow: 0 0 40px rgb(12, 202, 232);
-}
-
-.hero-content p {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    transition: all 0.5s ease;
-}
-
-.hero-content p:hover {
-    transform: scale(1.1);
-    text-shadow: 0 0 40px rgb(12, 202, 232);
-}
-
-.cta-button {
-    padding: 10px 30px;
-    background: #7fadf170;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 1.1rem;
-    transition: all 0.5s ease; /* Unit all animation */
-    display: inline-block; /* Важно для transform */
-    transform-origin: center; /* Точка трансформации по центру */
-    will-change: transform; /* Подсказка браузеру для оптимизации */
-    backface-visibility: hidden; /* Устраняет мерцание в Safari */
-}
-
-.cta-button:hover {
-    transform: scale(1.1);
-    background: #0040c9bb;
-    box-shadow: 0px 10px 60px rgba(135, 241, 255, 0.811);
-    color: white;
-    text-decoration: underline;
-}
-
 /* Features Section */
 .features {
     padding: 80px 0;
@@ -299,43 +330,50 @@ nav ul li a:hover {
     background-color: rgba(210, 210, 210, 0.199);
     text-align: center;
     padding: 20px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(100, 100, 100);
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.5s ease;
     margin-bottom: 20px;
 }
 
 .feature-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 10px 10px rgb(49, 80, 237);
+    /* transform: scale(1.05); */
+    box-shadow: 0 0 10px 10px rgb(49, 80, 237);
+    background-color: rgba(0, 0, 0, 0.521);
 }
 
 .feature-card i {
-    color: rgb(48, 101, 246);
+    font-size: 3rem;
+    color: rgb(0, 63, 235);
     margin-bottom: 20px;
+    transition: all 0.5s ease;
 }
 
 .feature-card:hover i {
-    color: rgb(49, 80, 237);
-    transform: scale(1.5);
+    color: rgb(0, 165, 247);
+    transform: rotate(360deg) scale(1.2);
 }
 
 .feature-card h3 {
     font-size: 2rem;
     margin-bottom: 10px;
+    transition: all 0.5s ease;
 }
 
 .feature-card:hover h3 {
     color: rgb(255, 255, 255);
+    transform: scale(1.1);
 }
 
 .feature-card p {
     font-size: 1.1rem;
     color: rgb(255, 255, 255);
+    transition: all 0.5s ease;
 }
 
 .feature-card:hover p {
-    color: rgb(49, 80, 237);
+    color: rgb(0, 165, 247);
+    transform: scale(1.1);
 }
 
 /* Adaptation for mobile devices */
