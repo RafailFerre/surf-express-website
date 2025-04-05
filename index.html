@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surf Express</title>
+    <!-- <link rel="icon" href="images/favicon.png" type="image/x-icon"> -->
 
     <!-- Connecting Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/chat.css">
 
+    <!-- Connecting EmailJS -->
     <script src="js/chat-config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
@@ -91,14 +93,14 @@
                                 <p>We prioritize the safety of your cargo</p>
                             </div>
                         </div>
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                             <div class="feature-card">
                                 <i class="fas fa-tachometer-alt fa-3x"></i>
                                 <h3>Speed</h3>
                                 <p>Fast and reliable delivery services</p>
                             </div>
                         </div>
-                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="700">
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
                             <div class="feature-card">
                                 <i class="fas fa-star fa-3x"></i>
                                 <h3>Quality</h3>
@@ -119,14 +121,14 @@
 
     <!-- Chat button -->
     <button id="chat-button" class="chat-button">
-        <i class="fas fa-comments"></i> Chat with us
+        <i class="fas fa-comments"></i> Send us a message
     </button>
 
     <!-- Chat window -->
     <div class="chat-container">
         <div id="chat-window" class="chat-window">
             <div class="chat-header">
-                <h3>Chat with us</h3>
+                <h3>Send us a message</h3>
                 <button id="close-chat" class="close-chat"><i class="fas fa-times"></i></button>
             </div>
             <div class="chat-body">
@@ -147,6 +149,7 @@
     </div>
 
     <!-- Подключение скриптов -->
+    <script src="js/home.js"></script>
     <script src="js/chat.js"></script>
     <script src="js/menu-toggle.js"></script>
 
