@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Surf Express</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+
+    <!-- Connecting Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Connecting Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Connecting Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Connecting AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Connecting Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+    <script src="js/chat-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    </script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Video background -->
+        <div class="video-background">
+            <video autoplay muted loop id="video-bg">
+                <source src="videos/truck-surf-contact.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Container for all content, except footer -->
+        <div class="content-overlay">
+            <!-- Header -->
+            <header>
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Surf Express Logo">
+                    <a href="index.html" class="logo-text">Surf Express</a>
+                </div>
+                <nav>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-users"></i> About us</a></li>
+                        <li><a href="services.html"><i class="fas fa-truck"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="contact-hero">
+                <div class="contact-hero-content" data-aos="fade-up" data-aos-delay="200">
+                    <h1><i class="fas fa-envelope"></i> Contacts</h1>
+                    <p>Get in touch with our team for any inquiries or assistance</p>
+                </div>
+            </section>
+
+            <!-- Contact Content -->
+            <section class="contact-content">
+                <div class="container">
+                    <div class="contact-info-block" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contact-info">
+                            <h2><i class="fas fa-map-marker-alt"></i> Address</h2>
+                            <p>555 Washington st, Chicago, IL 55555</p>
+                            
+                            <h2><i class="fas fa-phone"></i> Phone</h2>
+                            <p>555-555-55-77</p>
+                            
+                            <h2><i class="fas fa-envelope"></i> Email</h2>
+                            <p>surf-express@gmail.com</p>
+                            
+                            <h2><i class="fas fa-id-card"></i> MC Number</h2>
+                            <p>22-58965</p>
+                            
+                            <h2><i class="fas fa-truck"></i> DOT Number</h2>
+                            <p>88-89-255</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2 class="values-title">Our Driving Principles</h2>
+                <div class="values-grid">
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="100" data-aos-once="false">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Lightning Speed</h4>
+                        <p>Your cargo moves at the pace of modern business</p>
+                    </div>
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Ironclad Security</h4>
+                        <p>Your goods are protected like precious cargo</p>
+                    </div>
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="600" data-aos-once="false">
+                        <i class="fas fa-route"></i>
+                        <h4>Smart Routing</h4>
+                        <p>AI-optimized paths for maximum efficiency</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2023 Surf Express LLC. All rights reserved.</p>
+                <p>Website developed by Ferrum Software LLC.</p>
+                <p>Contact us: surf-express@gmail.com</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Chat button -->
+    <button id="chat-button" class="chat-button">
+        <i class="fas fa-comments"></i> Contact us
+    </button>
+
+    <!-- Chat window -->
+    <div class="chat-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <h3>Contact us</h3>
+                <button id="close-chat" class="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <p>Send us your message...</p>
+                <input type="text" id="chat-name" placeholder="Name" required>
+                <input type="email" id="chat-email" placeholder="Email" required>
+                <input type="tel" id="chat-phone" placeholder="Phone" required>
+                <textarea id="chat-message" placeholder="Type your message here..." required></textarea>
+            </div>
+            <div class="chat-footer">
+                <button id="send-message" class="send-button">Send</button>
+            </div>
+            <!-- Notification -->
+            <div id="notification" class="notification">
+                <span id="notification-message"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="js/contact.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/menu-toggle.js"></script>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Подключение AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+</html>

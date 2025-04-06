@@ -53,8 +53,8 @@
 }
 
 .about-hero-content.visible:hover {
-    transform: translateX(0) scale(1.05); /* Комбинируем трансформации */
-    box-shadow: 0 0 20px 20px rgba(43, 126, 221, 0.811);
+    transform: translateX(0) scale(1.07); /* Комбинируем трансформации */
+    box-shadow: 0 0 20px 10px rgba(43, 126, 221, 0.811);
     background-color: rgba(36, 36, 36, 0.892);
 }
 
@@ -121,7 +121,7 @@
     border: 1px solid rgba(48, 101, 246, 0.3);
     border-radius: 12px;
     padding: 30px;
-    margin: 40px 0;
+    margin: 60px 0;
     position: relative;
     right: -100%;
     opacity: 0;
@@ -135,9 +135,9 @@
 }
 
 .about-content-block:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: 0 0 10px 20px rgba(48, 101, 246, 0.4);
-    border-color: rgba(48, 101, 246, 0.7);
+    border-color: rgba(43, 126, 221, 0.811);
     background: rgba(36, 36, 36, 0.892);
 }
 
@@ -196,7 +196,7 @@
 }
 
 .values-title:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     color: rgb(255, 255, 255);
     text-shadow: 0 0 30px rgb(4, 238, 255);
 }
@@ -288,8 +288,8 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 2.4%;
-        right: -2%;
+        top: 2.6%;
+        right: -4.7%;
         background-color: rgba(36, 36, 36, 0.892);
         padding: 10px;
         border-radius: 5px;
