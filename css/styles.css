@@ -64,11 +64,31 @@ a:hover {
 
 /* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.68);
     padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed; /* Фиксированное позиционирование */
+    height: 100px;
+    width: 100%; /* На всю ширину экрана */
+    top: 0; /* Прижато к верху */
+    left: 0; /* Прижато к левому краю */
+    z-index: 1000; /* Чтобы хедер был поверх других элементов */
+    transition: all 0.3s ease; /* Плавное изменение стилей */
+}
+
+.content-overlay {
+    padding-top: 100px; /* Должно соответствовать высоте вашего хедера */
+    position: relative;
+    z-index: 1;
+}
+
+/* ДОБАВЛЕНО: Класс для скроллинга */
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.874); /* Цвет при скролле */
+    padding: 10px 0; /* Меньше отступы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Тень для эффекта "плавающего" хедера */
 }
 
 header .logo {
@@ -79,23 +99,24 @@ header .logo {
 }
 
 header .logo img {
-    height: 80px;
+    height: 70px;
     border-radius: 50%;
     border-color: rgba(76, 0, 254, 0.758);
+    box-shadow: 0 0 5px 5px rgba(131, 78, 255, 0.758);
     transition: all 0.5s ease;
 }
 
 header .logo img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px 8px rgba(131, 78, 255, 0.758);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 6px rgb(131, 78, 255);
 }
 
 header .logo .logo-text {
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 5px;
+    font-family: 'Brush Script MT';
+    margin-left: 15px;
     color: rgba(255, 255, 255, 1);
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 3.5rem;
+    font-weight: normal;
     text-decoration: none;
     transition: all 0.5s ease; /* Unit all animation */
 }
@@ -112,7 +133,7 @@ header .logo .logo-text:hover {
     display: flex;
     gap: 25px;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .nav-list li a {
@@ -153,27 +174,26 @@ nav ul li a:hover {
 @media (max-width: 770px) {
     .menu-toggle {
         display: block;
-        position: absolute;
-        top: 30px;
+        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
+        top: 35px; /* Подстроено под новый хедер */
         right: 10px;
+        z-index: 1001; /* Выше чем хедер */
     }
 
     .nav-list {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 4.2%;
-        right: -4.7%;
-        background-color: rgba(36, 36, 36, 0.892);
-        padding: 10px;
+        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
+        top: 50px; /* Подстроено под высоту хедера */
+        right: -20px;
+        background-color: rgba(36, 36, 36, 0.95);
+        padding: 15px;
         border-radius: 5px;
-        z-index: 3;
-        text-decoration: underline;
+        z-index: 1000;
     }
 
     .nav-list.active {
         display: flex;
-
     }
 
     .nav-list li {

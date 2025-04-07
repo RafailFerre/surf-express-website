@@ -1,5 +1,2 @@
-node_modules
 .idea
-.env
 .vscode
-css/trash.css

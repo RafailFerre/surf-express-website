@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Surf Express</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+
+    <!-- Connecting Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Connecting Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Connecting Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Connecting AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Connecting Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+    <script src="js/chat-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    </script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Video background -->
+        <div class="video-background">
+            <video autoplay muted loop id="video-bg">
+                <source src="videos/truck-surf-services.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Container for all content, except footer -->
+        <div class="content-overlay">
+            <!-- Header -->
+            <header>
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Surf Express Logo">
+                    <a href="index.html" class="logo-text">Surf Express</a>
+                </div>
+                <nav>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-users"></i> About us</a></li>
+                        <li><a href="services.html"><i class="fas fa-truck"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="services-hero">
+                <div class="services-hero-content" data-aos="fade-up" data-aos-delay="200">
+                    <h1><i class="fas fa-truck-moving"></i> Our Services</h1>
+                    <p>Comprehensive logistics solutions tailored to your needs</p>
+                </div>
+            </section>
+
+            <!-- Services Content -->
+            <section class="services-content">
+                <div class="container">
+                    <!-- Main Services Section -->
+                    <div class="services-grid">
+                        <!-- Flatbed Services -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="service-icon">
+                                <i class="fas fa-trailer"></i>
+                            </div>
+                            <h3>Flatbed Services</h3>
+                            <p>Open trailer solutions for oversized or irregularly shaped loads that require top or side loading.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> 48' and 53' options</li>
+                                <li><i class="fas fa-check-circle"></i> Heavy haul capability</li>
+                                <li><i class="fas fa-check-circle"></i> Secure tie-downs</li>
+                            </ul>
+                        </div>
+
+                        <!-- Dry Van Shipping -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3>Dry Van Shipping</h3>
+                            <p>Standard enclosed trailer service for general freight. Ideal for non-perishable goods that don't require temperature control.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> 53' trailers available</li>
+                                <li><i class="fas fa-check-circle"></i> LTL and FTL options</li>
+                                <li><i class="fas fa-check-circle"></i> Nationwide coverage</li>
+                            </ul>
+                        </div>
+
+                        <!-- Refrigerated Transport -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="service-icon">
+                                <i class="fas fa-snowflake"></i>
+                            </div>
+                            <h3>Refrigerated Transport</h3>
+                            <p>Temperature-controlled shipping for perishable items. Maintain precise temperatures from pickup to delivery.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> -20°F to +75°F range</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time monitoring</li>
+                                <li><i class="fas fa-check-circle"></i> FDA-compliant</li>
+                            </ul>
+                        </div>
+
+                        <!-- Expedited Shipping -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                            <div class="service-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3>Expedited Shipping</h3>
+                            <p>Time-sensitive delivery with guaranteed transit times. Our fastest service for critical shipments.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Dedicated teams</li>
+                                <li><i class="fas fa-check-circle"></i> 24/7 tracking</li>
+                                <li><i class="fas fa-check-circle"></i> On-time guarantee</li>
+                            </ul>
+                        </div>
+
+                        <!-- LTL Shipping -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                            <div class="service-icon">
+                                <i class="fas fa-boxes"></i>
+                            </div>
+                            <h3>LTL Shipping</h3>
+                            <p>Less-than-truckload solutions for smaller shipments. Combine your freight to save costs.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Palletized freight</li>
+                                <li><i class="fas fa-check-circle"></i> Cross-docking</li>
+                                <li><i class="fas fa-check-circle"></i> Consolidation</li>
+                            </ul>
+                        </div>
+
+                        <!-- Warehousing -->
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                            <div class="service-icon">
+                                <i class="fas fa-warehouse"></i>
+                            </div>
+                            <h3>Warehousing</h3>
+                            <p>Secure storage solutions with flexible terms. Our facilities are equipped for various inventory needs.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Climate control</li>
+                                <li><i class="fas fa-check-circle"></i> Inventory management</li>
+                                <li><i class="fas fa-check-circle"></i> Pick & pack</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service Areas Section -->
+                    <div class="service-areas" data-aos="fade-up" data-aos-delay="900">
+                        <h2><i class="fas fa-map-marked-alt"></i> Our Service Areas</h2>
+                        <div class="areas-grid">
+                            <div class="area-card">
+                                <h4><i class="fas fa-city"></i> Midwest</h4>
+                                <ul>
+                                    <li>Chicago, IL</li>
+                                    <li>Indianapolis, IN</li>
+                                    <li>Detroit, MI</li>
+                                    <li>Milwaukee, WI</li>
+                                </ul>
+                            </div>
+                            <div class="area-card">
+                                <h4><i class="fas fa-mountain"></i> West Coast</h4>
+                                <ul>
+                                    <li>Los Angeles, CA</li>
+                                    <li>San Francisco, CA</li>
+                                    <li>Seattle, WA</li>
+                                    <li>Portland, OR</li>
+                                </ul>
+                            </div>
+                            <div class="area-card">
+                                <h4><i class="fas fa-sun"></i> Southwest</h4>
+                                <ul>
+                                    <li>Dallas, TX</li>
+                                    <li>Houston, TX</li>
+                                    <li>Phoenix, AZ</li>
+                                    <li>Denver, CO</li>
+                                </ul>
+                            </div>
+                            <!-- <div class="area-card">
+                                <h4><i class="fas fa-building"></i> East Coast</h4>
+                                <ul>
+                                    <li>New York, NY</li>
+                                    <li>Boston, MA</li>
+                                    <li>Philadelphia, PA</li>
+                                    <li>Washington, DC</li>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <div class="values-section">
+                <h2 class="values-title">Our Driving Principles</h2>
+                <div class="values-grid">
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="100" data-aos-once="false">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Lightning Speed</h4>
+                        <p>Your cargo moves at the pace of modern business</p>
+                    </div>
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Ironclad Security</h4>
+                        <p>Your goods are protected like precious cargo</p>
+                    </div>
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="600" data-aos-once="false">
+                        <i class="fas fa-route"></i>
+                        <h4>Smart Routing</h4>
+                        <p>AI-optimized paths for maximum efficiency</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2023 Surf Express LLC. All rights reserved.</p>
+                <p>Website developed by Ferrum Software LLC.</p>
+                <p>Contact us: surf-express@gmail.com</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Chat button -->
+    <button id="chat-button" class="chat-button">
+        <i class="fas fa-comments"></i> Contact us
+    </button>
+
+    <!-- Chat window -->
+    <div class="chat-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <h3>Contact us</h3>
+                <button id="close-chat" class="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <p>Send us your message...</p>
+                <input type="text" id="chat-name" placeholder="Name" required>
+                <input type="email" id="chat-email" placeholder="Email" required>
+                <input type="tel" id="chat-phone" placeholder="Phone" required>
+                <textarea id="chat-message" placeholder="Type your message here..." required></textarea>
+            </div>
+            <div class="chat-footer">
+                <button id="send-message" class="send-button">Send</button>
+            </div>
+            <!-- Notification -->
+            <div id="notification" class="notification">
+                <span id="notification-message"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="js/header.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/menu-toggle.js"></script>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Подключение AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+</html>
