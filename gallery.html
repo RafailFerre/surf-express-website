@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Surf Express</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+
+    <!-- Connecting Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Connecting Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Connecting Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Connecting AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Connecting Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+    <script src="js/chat-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    </script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Video background -->
+        <div class="video-background">
+            <video autoplay muted loop id="video-bg">
+                <source src="videos/truck-surf-gallery.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Container for all content, except footer -->
+        <div class="content-overlay">
+            <!-- Header -->
+            <header>
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Surf Express Logo">
+                    <a href="index.html" class="logo-text">Surf Express</a>
+                </div>
+                <nav>
+                    <button class="menu-toggle" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-users"></i> About us</a></li>
+                        <li><a href="services.html"><i class="fas fa-truck"></i> Services</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-image"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Hero Section -->
+            <section class="gallery-hero">
+                <div class="gallery-hero-content" data-aos="fade-up" data-aos-delay="200">
+                    <h1><i class="fas fa-camera-retro"></i> Our Gallery</h1>
+                    <p>Explore our fleet and operations through these images</p>
+                </div>
+            </section>
+
+            <!-- Gallery Content -->
+            <section class="gallery-content">
+                <div class="container">
+                    <!-- Gallery Grid -->
+                    <div class="gallery-grid">
+                        <!-- Image 1 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                            <img src="images/gallery/fleet.jpg" alt="Our Fleet">
+                            <div class="gallery-overlay">
+                                <h3>Modern Fleet</h3>
+                                <p>Our well-maintained trucks ready for the road</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                            <img src="images/gallery/warehouse.jpg" alt="Warehouse">
+                            <div class="gallery-overlay">
+                                <h3>Warehouse Facilities</h3>
+                                <p>Secure storage for your goods</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                            <img src="images/gallery/delivery.jpg" alt="Delivery">
+                            <div class="gallery-overlay">
+                                <h3>On-time Delivery</h3>
+                                <p>Our team ensuring your shipments arrive safely</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 4 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                            <img src="images/gallery/team.jpg" alt="Our Team">
+                            <div class="gallery-overlay">
+                                <h3>Professional Team</h3>
+                                <p>Experienced drivers and logistics experts</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 5 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+                            <img src="images/gallery/refrigerated.jpg" alt="Refrigerated Transport">
+                            <div class="gallery-overlay">
+                                <h3>Temperature Control</h3>
+                                <p>Specialized equipment for perishable goods</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 6 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+                            <img src="images/gallery/flatbed.jpg" alt="Flatbed Transport">
+                            <div class="gallery-overlay">
+                                <h3>Flatbed Services</h3>
+                                <p>Handling oversized loads with care</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 7 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="900">
+                            <img src="images/gallery/maintenance.jpg" alt="Vehicle Maintenance">
+                            <div class="gallery-overlay">
+                                <h3>Regular Maintenance</h3>
+                                <p>Keeping our fleet in top condition</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 8 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="1000">
+                            <img src="images/gallery/loading.jpg" alt="Loading Process">
+                            <div class="gallery-overlay">
+                                <h3>Careful Loading</h3>
+                                <p>Professional handling of your cargo</p>
+                            </div>
+                        </div>
+
+                        <!-- Image 9 -->
+                        <div class="gallery-item" data-aos="fade-up" data-aos-delay="1100">
+                            <img src="images/gallery/unloading.jpg" alt="Unloading Process">
+                            <div class="gallery-overlay">
+                                <h3>Efficient Unloading</h3>
+                                <p>Streamlined delivery process</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <div class="testimonials-section">
+                <h2 class="testimonials-title">Client Experiences</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100" data-aos-once="false">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h4>Reliable Service</h4>
+                        <p>"Surf Express has been our logistics partner for 3 years. Their on-time delivery rate is exceptional."</p>
+                        <div class="client-info">- Manufacturing Co.</div>
+                    </div>
+                    <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300" data-aos-once="false">
+                        <i class="fas fa-refresh"></i>
+                        <h4>Temperature Control</h4>
+                        <p>"Our perishable goods always arrive in perfect condition. Their refrigerated units are top-notch."</p>
+                        <div class="client-info">- Food Distributor</div>
+                    </div>
+                    <div class="testimonial-item" data-aos="fade-up" data-aos-delay="600" data-aos-once="false">
+                        <i class="fas fa-medal"></i>
+                        <h4>Professional Team</h4>
+                        <p>"From drivers to customer service, everyone at Surf Express is knowledgeable and courteous."</p>
+                        <div class="client-info">- Retail Chain</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2023 Surf Express LLC. All rights reserved.</p>
+                <p>Website developed by Ferrum Software LLC.</p>
+                <p>Contact us: surf-express@gmail.com</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Chat button -->
+    <button id="chat-button" class="chat-button">
+        <i class="fas fa-comments"></i> Contact us
+    </button>
+
+    <!-- Chat window -->
+    <div class="chat-container">
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <h3>Contact us</h3>
+                <button id="close-chat" class="close-chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <p>Send us your message...</p>
+                <input type="text" id="chat-name" placeholder="Name" required>
+                <input type="email" id="chat-email" placeholder="Email" required>
+                <input type="tel" id="chat-phone" placeholder="Phone" required>
+                <textarea id="chat-message" placeholder="Type your message here..." required></textarea>
+            </div>
+            <div class="chat-footer">
+                <button id="send-message" class="send-button">Send</button>
+            </div>
+            <!-- Notification -->
+            <div id="notification" class="notification">
+                <span id="notification-message"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="js/header.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/menu-toggle.js"></script>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Подключение AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+</html>
