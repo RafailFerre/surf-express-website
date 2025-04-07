@@ -10,11 +10,15 @@
     margin-top: -40px;
     overflow: hidden;
 }
+/* Изменение отступов у родительского контейнера: Вместо 50px */
+/* .contact-content {
+    padding-top: 20px;
+} */
 
 /* Contact Hero Content */
 .contact-hero-content {
     position: relative;
-    z-index: 2; /* Увеличиваем z-index */
+    z-index: 2;
     max-width: 800px;
     padding: 40px;
     margin: 0 auto;
@@ -28,7 +32,7 @@
 }
 
 .contact-hero-content.visible {
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: translateY(0);
     opacity: 1;
 }
@@ -69,21 +73,22 @@
     transform-origin: center center;
     will-change: transform, opacity, box-shadow, background-color;
     max-width: 800px;
-    margin: 60px auto;
+    margin: 0px auto 80px; /* если нужно поднять поверх других элементов */
     padding: 40px;
     background-color: rgba(30, 30, 30, 0.7);
     border: 1px solid rgba(48, 101, 246, 0.5);
+    box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
     border-radius: 15px;
     color: white;
     position: relative;
     z-index: 1;
-    transform: translateY(50px);
+    transform: translateY(200px);
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .contact-info-block.visible {
-    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform: translateY(0) scale(1);
     opacity: 1;
 }
@@ -215,7 +220,7 @@
 }
 
 .value-item:hover h4 {
-    transform: scale(1.2);
+    transform: scale(1.1);
     color: rgb(255, 255, 255);
 }
 
@@ -240,27 +245,26 @@
 @media (max-width: 770px) {
     .menu-toggle {
         display: block;
-        position: absolute;
-        top: 30px;
+        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
+        top: 35px; /* Подстроено под новый хедер */
         right: 10px;
+        z-index: 1001; /* Выше чем хедер */
     }
 
     .nav-list {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 3.2%;
-        right: -4.7%;
-        background-color: rgba(36, 36, 36, 0.892);
-        padding: 10px;
+        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
+        top: 50px; /* Подстроено под высоту хедера */
+        right: -20px;
+        background-color: rgba(36, 36, 36, 0.95);
+        padding: 15px;
         border-radius: 5px;
-        z-index: 3;
-        text-decoration: underline;
+        z-index: 1000;
     }
 
     .nav-list.active {
         display: flex;
-
     }
 
     .nav-list li {
