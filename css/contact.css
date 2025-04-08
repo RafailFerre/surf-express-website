@@ -236,39 +236,74 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 770px) {
+/* Tablet Views (768px and up) */
+@media (min-width: 768px) {
+    .contact-hero-content {
+      padding: 30px;
+    }
+    
     .values-grid {
-        gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
     }
-}
-
-/* Adaptation for mobile devices menu toggle and navigation */
-@media (max-width: 770px) {
-    .menu-toggle {
-        display: block;
-        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
-        top: 35px; /* Подстроено под новый хедер */
-        right: 10px;
-        z-index: 1001; /* Выше чем хедер */
+    
+    .contact-hero-content h1 {
+      font-size: 2.8rem;
     }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
-        top: 50px; /* Подстроено под высоту хедера */
-        right: -20px;
-        background-color: rgba(36, 36, 36, 0.95);
-        padding: 15px;
-        border-radius: 5px;
-        z-index: 1000;
+  }
+  
+  /* Desktop Views (992px and up) */
+  @media (min-width: 992px) {
+    .contact-hero {
+      min-height: 70vh;
     }
-
-    .nav-list.active {
-        display: flex;
+    
+    .contact-hero-content {
+      padding: 40px;
+      transform: translateY(100px);
     }
-
-    .nav-list li {
-        margin: 10px 0;
+    
+    .values-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
-}
+    
+    .contact-hero-content h1 {
+      font-size: 3.5rem;
+    }
+  }
+  
+  /* Animation Adjustments for Mobile */
+  @media (max-width: 600px) {
+    .contact-hero-content.visible,
+    .contact-info-block.visible {
+      transform: translateY(20px);
+    }
+    
+    .value-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 5px 5px rgb(49, 80, 237);
+    }
+    
+    .value-item:hover i {
+      transform: rotate(180deg) scale(1.1);
+    }
+  }
+  
+  /* Performance Optimizations */
+  .value-item, .contact-info-block {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* Touch Device Adaptations */
+  @media (hover: none) {
+    .contact-hero-content:hover,
+    .contact-info-block:hover,
+    .value-item:hover {
+      transform: none !important;
+    }
+    
+    .value-item:active {
+      transform: scale(0.98);
+    }
+  }

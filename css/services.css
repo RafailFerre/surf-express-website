@@ -392,34 +392,3 @@
         gap: 20px;
     }
 }
-
-/* Adaptation for mobile devices menu toggle and navigation */
-@media (max-width: 770px) {
-    .menu-toggle {
-        display: block;
-        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
-        top: 35px; /* Подстроено под новый хедер */
-        right: 10px;
-        z-index: 1001; /* Выше чем хедер */
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
-        top: 50px; /* Подстроено под высоту хедера */
-        right: -20px;
-        background-color: rgba(36, 36, 36, 0.95);
-        padding: 15px;
-        border-radius: 5px;
-        z-index: 1000;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 10px 0;
-    }
-}
