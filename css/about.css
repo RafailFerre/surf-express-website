@@ -22,28 +22,32 @@
 /* About Hero Section */
 .about-hero {
     position: relative;
-    height: 60vh;
+    height: auto; /* Automatically adjust height */
     min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: -40px; /* Отступ от header */
+    padding: 60px 0 40px; /* Space between header and content 80px — top,0 — right left, 40px—bottom */
+    /* margin-top: -40px;  Space between header and content */
     overflow: hidden;
 }
 
 .about-hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    width: 90%; /* Reduce content width automatically when screen size decreases */
     max-width: 800px;
     padding: 40px;
+    /* margin: 0 auto; */
     background-color: rgba(57, 57, 57, 0.541);
     border: 1px solid rgba(48, 101, 246, 0.5);
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
-    transform: translateX(100%);
+    transform: translateY(100%) scale(0.5); /* Appear from the bottom with scaling */
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-sizing: border-box; /* Важно для правильного расчёта размеров */
 }
 
 .about-hero-content.visible {
@@ -196,7 +200,7 @@
 }
 
 .values-title:hover {
-    transform: scale(1.2);
+    transform: scale(1.17);
     color: rgb(255, 255, 255);
     text-shadow: 0 0 30px rgb(4, 238, 255);
 }

@@ -14,6 +14,7 @@
 .gallery-hero-content {
     position: relative;
     z-index: 2;
+    width: 90%; /* Reduce content width automatically when screen size decreases */
     max-width: 800px;
     padding: 40px;
     margin: 0 auto;
@@ -21,7 +22,7 @@
     border: 1px solid rgba(48, 101, 246, 0.5);
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
-    transform: translateY(100%);
+    transform: translateY(100%) scale(0.5); /* Appear from the bottom with scaling */
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
