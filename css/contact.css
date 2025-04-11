@@ -1,24 +1,22 @@
 /* Contact Hero Section */
 .contact-hero {
     position: relative;
-    height: 60vh;
+    height: auto; /* Automatically adjust height */
     min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: -40px;
+    /*padding: 60px 0 40px; /* Space between header and content 80px — top,0 — right left, 40px—bottom */
+    margin-top: 0px; /* Space between header and content */
     overflow: hidden;
 }
-/* Изменение отступов у родительского контейнера: Вместо 50px */
-/* .contact-content {
-    padding-top: 20px;
-} */
 
 /* Contact Hero Content */
 .contact-hero-content {
     position: relative;
     z-index: 2;
+    width: 90%; /* Reduce content width automatically when screen size decreases */
     max-width: 800px;
     padding: 40px;
     margin: 0 auto;
@@ -26,9 +24,11 @@
     border: 1px solid rgba(48, 101, 246, 0.5);
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(48, 101, 246, 0.3);
-    transform: translateY(100%);
+    transform: translateY(100%) scale(0.5); /* Appear from the bottom with scaling */
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* box-sizing: border-box; Важно для правильного расчёта размеров */
+    /* min-height: 300px; Minimum height */
 }
 
 .contact-hero-content.visible {
@@ -73,7 +73,7 @@
     transform-origin: center center;
     will-change: transform, opacity, box-shadow, background-color;
     max-width: 800px;
-    margin: 0px auto 80px; /* если нужно поднять поверх других элементов */
+    margin: 20px auto;
     padding: 40px;
     background-color: rgba(30, 30, 30, 0.7);
     border: 1px solid rgba(48, 101, 246, 0.5);
@@ -82,7 +82,7 @@
     color: white;
     position: relative;
     z-index: 1;
-    transform: translateY(200px);
+    transform: translateY(100px);
     opacity: 0;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -156,7 +156,8 @@
     text-align: center;
     font-size: 3rem;
     color: rgb(183, 183, 183);
-    margin-bottom: 50px;
+    margin-top: 80px;
+    margin-bottom: 10px;
     position: relative;
     transition: all 0.5s ease;
 }
@@ -236,39 +237,71 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 770px) {
-    .values-grid {
-        gap: 20px;
-    }
+
+/* Адаптация под разные устройства */
+@media (max-width: 768px) {
+  .contact-hero-content {
+      padding: 25px;
+  }
+  .contact-hero-content h1 {
+      font-size: 2.5rem;
+  }
+  .contact-hero-content p {
+      font-size: 1.4rem;
+  }
 }
 
-/* Adaptation for mobile devices menu toggle and navigation */
-@media (max-width: 770px) {
-    .menu-toggle {
-        display: block;
-        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
-        top: 35px; /* Подстроено под новый хедер */
-        right: 10px;
-        z-index: 1001; /* Выше чем хедер */
-    }
 
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: fixed; /* ИЗМЕНЕНО: Фиксированное позиционирование */
-        top: 50px; /* Подстроено под высоту хедера */
-        right: -20px;
-        background-color: rgba(36, 36, 36, 0.95);
-        padding: 15px;
-        border-radius: 5px;
-        z-index: 1000;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 10px 0;
-    }
+/* Особые случаи для коротких экранов */
+@media (max-height: 600px) {
+  .contact-hero {
+      padding: 40px 0;
+  }
+  .contact-hero-content {
+      padding: 20px;
+  }
 }
+  
+  /* Animation Adjustments for Mobile */
+  @media (max-width: 600px) {
+    .contact-hero-content.visible,
+    .contact-info-block.visible {
+      transform: translateY(20px);
+    }
+
+    .values-title {
+      font-size: 1.9rem;
+    }
+
+    .values-title:hover {
+      transform: scale(1.1);
+    }
+
+    .value-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 5px 5px rgb(49, 80, 237);
+    }
+    
+    .value-item:hover i {
+      transform: rotate(180deg) scale(1.1);
+    }
+  }
+  
+  /* Performance Optimizations */
+  .value-item, .contact-info-block {
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+  
+  /* Touch Device Adaptations */
+  @media (hover: none) {
+    .contact-hero-content:hover,
+    .contact-info-block:hover,
+    .value-item:hover {
+      transform: none !important;
+    }
+    
+    .value-item:active {
+      transform: scale(0.98);
+    }
+  }
