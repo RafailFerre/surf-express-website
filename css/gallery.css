@@ -252,9 +252,9 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
     
-    .testimonials-title {
-        font-size: 2.2rem;
-    }
+    /* .testimonials-title {
+        font-size: 2.5rem;
+    } */
 }
 
 @media (max-width: 480px) {
@@ -272,5 +272,9 @@
     
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+
+    .testimonials-title {
+        font-size: 2.7rem;
     }
 }
